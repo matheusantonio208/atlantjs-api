@@ -21,7 +21,7 @@ services:
 
   db-mongo:
     image: mongo
-    container_name: mongoDB
+    container_name: mongoDB-${APP_NAME}
     restart: always
     depends_on:
       - nodeJS

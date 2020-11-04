@@ -11,7 +11,7 @@ describe('teste template', () => {
   });
 
   it('the project was successfully installed', async () => {
-    const response = await request(server).get('/test');
+    const response = await request(server).get('/');
 
     expect(response.status).toBe(200);
   });

@@ -112,12 +112,12 @@
           "rootPathPrefix": "#views/"
         },
         {
-          "rootPathSuffix": "./models",
-          "rootPathPrefix": "#models/"
+          "rootPathSuffix": "./src/schemas",
+          "rootPathPrefix": "#schemas/"
         },
         {
-          "rootPathSuffix": "./schemas",
-          "rootPathPrefix": "#schemas/"
+          "rootPathSuffix": "./src/services",
+          "rootPathPrefix": "#services/"
         },
         {
           "rootPathSuffix": "./src/views/styles",
