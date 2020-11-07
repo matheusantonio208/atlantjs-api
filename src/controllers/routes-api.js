@@ -1,22 +1,20 @@
 import { Router } from 'express';
 
+import Software from '#controllers/Software/software-controller.js';
+
 class Routes {
   constructor() {
     this.route = new Router();
 
-    this.exampleRoute('/');
+    this.software('/software');
   }
 
-  exampleRoute(baseRoute) {
-    this.route.get(`${baseRoute}`, (req, res) => {
-      return res.status(200).json({
-        success_msg: 'Welcome to Atlantjs. Onde sua criatividade vira realidade.',
-      });
-    });
-  
-    this.route.post(`${baseRoute}/db`, (req, res) => {
-      return res.status(201).json({ success_msg: 'Already!' });
-    });
+  software(baseRoute) {
+    this.route.get(`${baseRoute}/getone/:_id`, Software.index);
+    this.route.get(`${baseRoute}/getall`, Software.show);
+    this.route.put(`${baseRoute}/update/:_id`, Software.update);
+    this.route.post(`${baseRoute}/create`, Software.create);
+    this.route.delete(`${baseRoute}/delete/:_id`, Software.delete);
   }
 }
 

@@ -1,9 +1,9 @@
-import '#config/env-loader';
-import express from 'express';
+import '#config/env-loader.js';
 import cors from 'cors';
-import Youch from '#config/debug/youch-config.js'
+import express from 'express';
 
 import MongoDB from '#config/db-mongo/mongo-connect.js';
+import Youch from '#config/debug/youch-config.js';
 
 import routes from '#controllers/routes-api.js';
 
