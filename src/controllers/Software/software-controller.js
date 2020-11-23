@@ -1,14 +1,11 @@
 import { softwareObject } from './software-object.js';
 import Software from './software-repository.js';
-import zip from '#lib/adm-zip/adm-zip.js';
 
 class SoftwareController {
   async index(req, res) {
     try {
       const softwareId = req.params._id;
       const softwareFound = await Software.getOneById(softwareId);
-
-      zip();
 
       return res.status(201).json(softwareFound);
     } catch (error) {
